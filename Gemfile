@@ -47,6 +47,9 @@ group :development, :test do
   gem 'rubocop-rake', '~> 0.6.0'
   gem 'rubocop-rspec', '~> 2.24', '>= 2.24.1'
   gem 'rubocop-thread_safety', '~> 0.5.1'
+  gem 'annotate', '~> 3.2'
+  gem 'faker', '~> 3.2', '>= 3.2.1'
+  gem 'shoulda-matchers', '~> 5.3'
 end
 
 group :development do
