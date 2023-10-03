@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кинопоиск</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .movie {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        .movie img {
+            width: 150px;
+            height: auto;
+            margin-right: 20px;
+            border-radius: 5px;
+        }
+        .movie-info {
+            flex-grow: 1;
+        }
+        h2 {
+            margin-top: 0;
+        }
+        p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Поиск фильмов</h1>
+    </header>
+
+    <div class="container">
+        <form action="#" method="get">
+            <label for="movie-search">Введите название фильма:</label>
+            <input type="text" id="movie-search" name="q">
+            <button type="submit">Поиск</button>
+        </form>
+
+        <h2>Результаты поиска:</h2>
+        <div class="movie">
+            <img src="https://via.placeholder.com/150x200" alt="Фильм 1">
+            <div class="movie-info">
+                <h2>Фильм 1</h2>
+                <p>Описание фильма 1.</p>
+                <p>Рейтинг: 8.0</p>
+            </div>
+        </div>
+
+        <div class="movie">
+            <img src="https://via.placeholder.com/150x200" alt="Фильм 2">
+            <div class="movie-info">
+                <h2>Фильм 2</h2>
+                <p>Описание фильма 2.</p>
+                <p>Рейтинг: 7.5</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

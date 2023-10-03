@@ -24,6 +24,12 @@ gem 'puma', '~> 5.0'
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 # gem "bcrypt", "~> 3.1.7"
 
+gem "cssbundling-rails"
+# Generate JSON objects with a Builder-style DSL. [https://github.com/rails/jbuilder]
+gem "jbuilder"
+# Bundle and transpile JavaScript in Rails with esbuild, rollup.js, or Webpack. [https://github.com/rails/jsbundling-rails]
+gem "jsbundling-rails"
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
@@ -52,6 +58,7 @@ group :development, :test do
   gem 'shoulda-matchers', '~> 5.3'
   gem 'pry', '~> 0.14.1'
   gem 'pry-nav'
+
 end
 
 group :development do

@@ -9,18 +9,260 @@
 #
 # See https://docs.rubocop.org/rubocop/configuration
 
+# require:
+#   - rubocop-thread_safety
+#   - rubocop-rspec
+#   - rubocop-performance
+#   - rubocop-rails
+#   - rubocop-rake
+
 require:
-  - rubocop-thread_safety
-  - rubocop-rspec
-  - rubocop-performance
   - rubocop-rails
+  - rubocop-capybara
+  - rubocop-factory_bot
+  - rubocop-rspec
   - rubocop-rake
+  - rubocop-thread_safety
+  - rubocop-performance
 
 AllCops:
+  TargetRubyVersion: 3.2.2
+  DisplayCopNames: true
   Exclude:
-    - 'spec/spec_helper.rb'
-    - 'spec/rails_helper.rb'
-    - 'db/migrate/*'
-    - 'db/schema.rb'
+    - bin/**/*
+    - db/**/*
+    - config/**/*
+    - vendor/**/*
+    - tmp/**/*
+    - node_modules/**/*
+  NewCops: enable
+
+Rails/HasAndBelongsToMany:
+  Enabled: false
+
+Rails/Delegate:
+  Enabled: false
+
+Rails/Output:
+  Exclude:
+    - config/puma.rb
+
+Rails/OutputSafety:
+  Enabled: false
+
+Rails/FilePath:
+  Enabled: false
+
+Rails/SkipsModelValidations:
+  Enabled: false
+
+Rails/InverseOf:
+  Enabled: false
+
+Rails/SquishedSQLHeredocs:
+  Exclude:
+    - Rakefile
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/GuardClause:
+  Enabled: false
+
+Style/IfUnlessModifier:
+  Enabled: false
+
+Style/NegatedIf:
+  Enabled: false
+
+Style/AccessModifierDeclarations:
+  Enabled: false
+
+Style/AndOr:
+  Enabled: false
+
+Style/Lambda:
+  Enabled: false
+
+Style/OptionalArguments:
+  Enabled: false
+
+Style/RedundantInterpolation:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/MethodCalledOnDoEndBlock:
+  Enabled: false
+
+Style/EachWithObject:
+  Enabled: true
+
+Style/CollectionMethods:
+  Enabled: true
+
+Style/SymbolArray:
+  Enabled: false
+
+Style/EmptyMethod:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/StringMethods:
+  Enabled: true
+
+Style/StringLiterals:
+  Enabled: false
+
+Style/Alias:
+  Enabled: false
+
+Style/RegexpLiteral:
+  EnforcedStyle: slashes
+  AllowInnerSlashes: true
+
+Style/GlobalVars:
+  AllowedVariables:
+    - $redis
+
+Style/PercentLiteralDelimiters:
+  Enabled: false
+
+Style/DoubleNegation:
+  Enabled: false
+
+Style/HashEachMethods:
+  Enabled: true
+
+Style/HashTransformKeys:
+  Enabled: false
+
+Style/HashTransformValues:
+  Enabled: false
+
+Style/WordArray:
+  Enabled: false
+
+Style/OpenStructUse:
+  Enabled: false
+
+Layout/LineLength:
+  Max: 120
+  Exclude:
+    - Gemfile
+
+Metrics/ModuleLength:
+  Max: 100
+
+Metrics/ClassLength:
+  Max: 150
+
+Metrics/CyclomaticComplexity:
+  Enabled: true
+  Max: 8
+
+Metrics/BlockLength:
+  Enabled: false
+
+Layout/EndAlignment:
+  EnforcedStyleAlignWith: variable
+  SupportedStylesAlignWith:
+    - keyword
+    - variable
+
+Lint/SymbolConversion:
+  Enabled: false
+
+Lint/UselessAssignment:
+  Enabled: false
+
+Lint/UnusedMethodArgument:
+  Enabled: false
+
+Lint/EmptyBlock:
+  Exclude:
+    - config/routes.rb
+
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+
+Layout/HashAlignment:
+  Enabled: false
+
+Layout/DotPosition:
+  Enabled: false
+
+Layout/LineEndStringConcatenationIndentation:
+  Enabled: false
+
+Layout/TrailingEmptyLines:
+  Enabled: false
+
+Layout/ParameterAlignment:
+  EnforcedStyle: with_fixed_indentation
+  SupportedStyles:
+    - with_first_parameter
+    - with_fixed_indentation
+
+Layout/FirstArrayElementIndentation:
+  EnforcedStyle: consistent
+
+Lint/AmbiguousBlockAssociation:
+  Enabled: false
+
+Lint/AmbiguousOperatorPrecedence:
+  Enabled: false
+
+Naming/VariableNumber:
+  Enabled: false
+
+Naming/PredicateName:
+  Enabled: false
+
+Naming/MemoizedInstanceVariableName:
+  Enabled: false
+
+Rails/UnknownEnv:
+  Environments:
+    - production
+    - development
+    - test
+
+Rails/Date:
+  Enabled: false
+
+Rails/LexicallyScopedActionFilter:
+  Enabled: false
+
+Rails/Inquiry:
+  Enabled: false
+
+Metrics/AbcSize:
+  Enabled: false
+
+Rails/EnvironmentVariableAccess:
+  Enabled: false
+
+Rails/TimeZoneAssignment:
+  Enabled: false
+
+Rails/HttpStatus:
+  Enabled: false
+
+Style/RedundantFetchBlock:
+  Enabled: false
+
+RSpec/MultipleExpectations:
+  Max: 5
+
+RSpec/NestedGroups:
+  Max: 4
+
+RSpec/LetSetup:
+  Enabled: false
+
     
   
