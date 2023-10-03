@@ -10,6 +10,7 @@
     description: 'horror film',
     release: '1991-02-14',
     movie_genres_attributes: [{ genre: :horror }] }
+  
 ].each { |movie| Movie.create!(movie) }
 
 [

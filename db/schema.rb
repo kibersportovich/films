@@ -29,6 +29,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_30_001647) do
     t.date "release", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["name", "release"], name: "index_movies_on_name_and_release", unique: true
   end
 
 end

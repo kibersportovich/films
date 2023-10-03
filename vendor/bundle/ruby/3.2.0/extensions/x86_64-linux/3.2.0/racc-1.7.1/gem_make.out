@@ -1,0 +1,20 @@
+current directory: /home/kibersportovich/ruby-projects/films/films_api/vendor/bundle/ruby/3.2.0/gems/racc-1.7.1/ext/racc/cparse
+/home/kibersportovich/.rbenv/versions/3.2.2/bin/ruby extconf.rb
+checking for rb_block_call()... yes
+checking for rb_ary_subseq()... yes
+creating Makefile
+
+current directory: /home/kibersportovich/ruby-projects/films/films_api/vendor/bundle/ruby/3.2.0/gems/racc-1.7.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20231001-40868-x8l39f sitelibdir\=./.gem.20231001-40868-x8l39f clean
+
+current directory: /home/kibersportovich/ruby-projects/films/films_api/vendor/bundle/ruby/3.2.0/gems/racc-1.7.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20231001-40868-x8l39f sitelibdir\=./.gem.20231001-40868-x8l39f
+compiling cparse.c
+linking shared-object racc/cparse.so
+
+current directory: /home/kibersportovich/ruby-projects/films/films_api/vendor/bundle/ruby/3.2.0/gems/racc-1.7.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20231001-40868-x8l39f sitelibdir\=./.gem.20231001-40868-x8l39f install
+/usr/bin/install -c -m 0755 cparse.so ./.gem.20231001-40868-x8l39f/racc
+
+current directory: /home/kibersportovich/ruby-projects/films/films_api/vendor/bundle/ruby/3.2.0/gems/racc-1.7.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20231001-40868-x8l39f sitelibdir\=./.gem.20231001-40868-x8l39f clean

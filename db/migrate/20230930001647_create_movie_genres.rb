@@ -3,7 +3,7 @@ class CreateMovieGenres < ActiveRecord::Migration[7.0]
     create_table :movie_genres do |t|
       t.string :genre, null: false
       t.timestamps
-      t.belongs_to :movie, null: false
+      t.belongs_to :movie, null: false, on_delete: :cascade
 
     end
     add_index :movie_genres, [:genre, :movie_id], unique: true
