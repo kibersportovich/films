@@ -16,7 +16,8 @@
 
 class Movie < ApplicationRecord
   has_many :movie_genres, dependent: :delete_all
-  scope :adult, -> { joins(:movie_genres).where(movie_genres: { genre: 'horror' }) }
+  #scope :adult, -> { joins(:movie_genres).where(movie_genres: { genre: 'horror' }) }
+  scope :join_genres, -> { joins(:movie_genres) }
   # binding.pry
   accepts_nested_attributes_for :movie_genres
   validates :name, presence: true

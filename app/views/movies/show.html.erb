@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Кинопоиск</title>
+    <title>Информация о фильме</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
             margin: 0;
             padding: 0;
-        } 
+        }
         header {
             background-color: #333;
             color: #fff;
@@ -52,28 +52,18 @@
 </head>
 <body>
     <header>
-        <h1>Поиск фильмов</h1>
+        <h1>Информация о фильме</h1>
     </header>
-
-    <div class="container">
-        <form action="#" method="get">
-            <label for="movie-search">Введите название фильма:</label>
-            <br/>
-            <input type="text" id="movie-search" name="name">
-            <button type="submit">Поиск</button>
-            <br/>
-        </form>
-
-        <% @movies.each do |movie|%>
-            <p>image</p>
-            <br/>
-            <h1><%= movie.name %></h1>
-            <p>Описание фильма: <%= movie.description %></p>
-            <p>Дата релиза: <%= movie.release.to_s %></p>
-            <br/>
-        <% end %>
-    </div>
+        <center>
+        <div class="movie">
+            <div class="movie-info">
+                <h2><%= @movie.name %></h2>
+                <p><strong>Дата релиза: </strong><%= @movie.release %></p>
+                <p><strong>Описание: </strong> <%= @movie.description %> </p>
+                <br/>   
+                <img src="https://via.placeholder.com/1200x1000" alt="Обложка Фильма">
+            </div>
+        </div>
+        </center>
 </body>
 </html>
-
-

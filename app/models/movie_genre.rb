@@ -14,6 +14,10 @@
 #  index_movie_genres_on_movie_id            (movie_id)
 #
 class MovieGenre < ApplicationRecord
-  enum genre: {horror: 'horror', comedy: 'comedy'}
+  enum genre: {horror: 'horror', comedy: 'comedy',
+               action: 'action', drama: 'drama',
+               fantasy: 'fantasy', mystery: 'mystery',
+               romance: 'romance', thriller: 'thriller',
+               western: 'western'}
   belongs_to :movie
 end

@@ -5,19 +5,27 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-[
-  { name: 'film 2',
-    description: 'horror film',
-    release: '1991-02-14',
-    movie_genres_attributes: [{ genre: :horror }] }
+# [
+#   { name: 'film 2',
+#     description: 'horror film',
+#     release: '1991-02-14',
+#     movie_genres_attributes: [{ genre: :horror }] }
   
-].each { |movie| Movie.create!(movie) }
+# ].each { |movie| Movie.create!(movie) }
 
-[
-  { name: 'film 3',
-    description: 'horror film',
-    release: '1991-02-14' }
-].each do |movie| 
-    a = Movie.new(movie)
-    a.save!
+# [
+#   { name: 'film 3',
+#     description: 'horror film',
+#     release: '1991-02-14' }
+# ].each do |movie| 
+#     a = Movie.new(movie)
+#     a.save!
+# end
+
+
+(5..100).each do |inx|
+  Movie.create!( {name: Faker::DcComics.title,
+              release: Faker::Date.birthday,
+              description: Faker::Lorem.sentence,
+              movie_genres_attributes: [{genre: MovieGenre.genres.keys.sample.to_sym}]} )
 end
