@@ -58,7 +58,7 @@ group :development, :test do
   gem 'shoulda-matchers', '~> 5.3'
   gem 'pry', '~> 0.14.1'
   gem 'pry-nav'
-
+  gem 'pagy', '~> 0.8.1'
 end
 
 group :development do

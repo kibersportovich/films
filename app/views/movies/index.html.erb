@@ -72,6 +72,11 @@
             <p>Дата релиза: <%= movie.release.to_s %></p>
             <br/>
         <% end %>
+
+        <div class="pagy">
+            <%# binding.pry %>
+            <%== pagy_nav(@pagy) %>
+        </div>
     </div>
 </body>
 </html>

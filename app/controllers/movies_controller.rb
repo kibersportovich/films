@@ -1,9 +1,10 @@
 class MoviesController < ApplicationController
   
   def index
-    @movies = Movie.all
+    # @movies = Movie.all
     # render json: @movies
     # binding.pry
+    @pagy, @movies = pagy(Movie.all)
     render 'movies/index'
   end
 

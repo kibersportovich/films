@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::API
   rescue_from Exception, with: :error_handler
-
+  include Pagy::Backend
   private
 
   def error_handler
